@@ -27,7 +27,7 @@ jobs:
       - name: Change package name
         uses: jaywcjlove/github-action-package@v1.3.1
         with:
-          path: './dist/ng-pattern-mask'
+          path: './dist/ng-pattern-mask/package.json'
           rename: 'ng-pattern-mask'
       - name: Pack
         working-directory: ./dist/ng-pattern-mask
