@@ -13,6 +13,7 @@ jobs:
         with:
           version: 6.0.2
       - run: pnpm install
+      - run: pnpm run build-lib
 
   publish-gpr:
     needs: build
@@ -22,9 +23,9 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 16
+          version: 6.0.2
           registry-url: https://npm.pkg.github.com/
       - run: pnpm install
       - run: pnpm run build-lib
