@@ -31,9 +31,9 @@ jobs:
         run: npm config set registry https://registry.npmjs.org
       # - name: Npm registry authentication
       #   run: npm set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
-      - name: Create npmrc
-        working-directory: ./dist/ng-pattern-mask
-        run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > /home/runner/work/ng-pattern-mask/ng-pattern-mask/dist/ng-pattern-mask/.npmrc
+      # - name: Create npmrc
+      #   working-directory: ./dist/ng-pattern-mask
+      #   run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > /home/runner/work/ng-pattern-mask/ng-pattern-mask/dist/ng-pattern-mask/.npmrc
       - name: NPM whoami
         run: npm whoami
       - name: Publish
