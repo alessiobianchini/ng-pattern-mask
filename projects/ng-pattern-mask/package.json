@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/alessiobianchini/ng-pattern-mask"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"
