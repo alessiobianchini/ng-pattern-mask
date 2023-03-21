@@ -1,6 +1,7 @@
 {
   "name": "@alessiobianchini/ng-pattern-mask",
-  "version": "1.0.0",
+  "description": "Angular library from input mask"
+  "version": "1.0.1",
   "author": {
     "name": "Alessio Bianchini",
     "email": "alessio.bianchini@doit.it"
