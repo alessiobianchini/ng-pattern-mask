@@ -1,6 +1,8 @@
 # NgPatternMask
-[![Build and publish library to github registry](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-github.yml/badge.svg?branch=master)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-github.yml)
-[![Build and publish library to npm.js registry](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-npmjs.yml/badge.svg?branch=master)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-npmjs.yml)
+
+## Actions status
+[![Build and publish library to github registry](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-github.yml/badge.svg)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-github.yml)
+[![Build and publish library to npm.js registry](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-npmjs.yml/badge.svg)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package-npmjs.yml)
 
 ## Development server
 
