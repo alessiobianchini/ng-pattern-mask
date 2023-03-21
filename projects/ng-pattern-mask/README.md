@@ -1,24 +1,36 @@
 # NgPatternMask
+[![Node.js Package](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package.yml/badge.svg)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package.yml)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+## Development server
 
-## Code scaffolding
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name --project ng-pattern-mask` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-pattern-mask`.
-> Note: Don't forget to add `--project ng-pattern-mask` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Install
+`npm install ng-pattern-mask`
 
-Run `ng build ng-pattern-mask` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Configuration
+```javascript
+import {NgPatternMaskModule} from 'ng-pattern-mask';
 
-## Publishing
+@NgModule({
+  imports: [
+    NgPatternMaskModule,
+    ...
+  ],
+  ...
+}) {...}
+```
 
-After building your library with `ng build ng-pattern-mask`, go to the dist folder `cd dist/ng-pattern-mask` and run `npm publish`.
+## Basic usage
+```html
+<!-- directive -->
+<input 
+    ngPatternMask
+    ngpmPattern="dd.MM.yyyy"
+    placeholder="dd.MM.yyyy"
+    ngpmDigitPlaceholders="abcd" <!-- OPTIONAL default = XdDmMyY09 -->
+    ngpmCharPlaceholders="_-" <!-- OPTIONAL default = _ -->
+/>
+```
 
-## Running unit tests
-
-Run `ng test ng-pattern-mask` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
