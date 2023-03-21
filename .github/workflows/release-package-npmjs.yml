@@ -18,8 +18,10 @@ jobs:
       - name: Setup NPM
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 'lts/*'
           registry-url: https://registry.npmjs.org/
+          always-auth: true
+          token: ${{secrets.NPM_TOKEN}}
       - name: Install dependencies
         run: npm i
       - name: Build
@@ -31,11 +33,10 @@ jobs:
         run: npm config set registry https://registry.npmjs.org
       # - name: Npm registry authentication
       #   run: npm set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
-      # - name: Create npmrc
-      #   working-directory: ./dist/ng-pattern-mask
-      #   run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > /home/runner/work/ng-pattern-mask/ng-pattern-mask/dist/ng-pattern-mask/.npmrc
-      - name: NPM whoami
-        run: npm whoami
+      - name: Create npmrc
+        run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > .npmrc
+      # - name: NPM whoami
+      #   run: npm whoami
       - name: Publish
         working-directory: ./dist/ng-pattern-mask
         run: npm publish --access public 
