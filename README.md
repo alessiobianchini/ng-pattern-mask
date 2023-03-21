@@ -1,4 +1,6 @@
 # NgPatternMask
+[![Node.js Package](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package.yml/badge.svg)](https://github.com/alessiobianchini/ng-pattern-mask/actions/workflows/release-package.yml)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
