@@ -1,6 +1,17 @@
 {
   "name": "ng-pattern-mask",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": {
+    "name": "Alessio Bianchini",
+    "email": "alessio.bianchini@doit.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessiobianchini/ng-pattern-mask"
+  },
+  "publishConfig": {
+    "registry": "@alessiobianchini:registry=https://npm.pkg.github.com"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"
