@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  publish:
+  build-publish:
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -24,10 +24,10 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm run build-lib
-      - name: Publish
+      - name: Pack
         working-directory: ./dist/ng-pattern-mask
-        run: pnpm pack --no-git-checks
-      - name: Run Publish
+        run: pnpm pack
+      - name: Publish
         working-directory: ./dist/ng-pattern-mask
         run: pnpm publish --no-git-checks
         env:
