@@ -29,15 +29,13 @@ jobs:
         run: npm pack
       - name: Set package registry
         run: npm config set registry https://registry.npmjs.org
-      - name: Npm registry authentication
-        run: npm set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
-      - name: NPM login
-        run: npm login
+      # - name: Npm registry authentication
+      #   run: npm set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
+      - name: Create npmrc
+        working-directory: ./dist/ng-pattern-mask
+        run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > /home/runner/work/ng-pattern-mask/ng-pattern-mask/dist/ng-pattern-mask/.npmrc
       - name: NPM whoami
         run: npm whoami
-      # - name: Create npmrc
-      #   working-directory: ./dist/ng-pattern-mask
-      #   run: echo //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} > .npmrc
       - name: Publish
         working-directory: ./dist/ng-pattern-mask
         run: npm publish --access public 
