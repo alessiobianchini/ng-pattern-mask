@@ -32,6 +32,6 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
       - name: Publish
         working-directory: ./dist/ng-pattern-mask
-        run: npm publish --access public --ignore-scripts --@alessiobianchini:registry='https://registry.npmjs.org'
+        run: npm publish --access public --ignore-scripts --registry='https://registry.npmjs.org'
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
