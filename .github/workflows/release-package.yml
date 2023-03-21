@@ -29,6 +29,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: pnpm install
       - run: pnpm run build-lib
-      - run: pnpm publish ng-pattern-mask
+      - name: Run Tests
+        working-directory: ./dist/ng-pattern-mask
+        run: pnpm publish ng-pattern-mask
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
