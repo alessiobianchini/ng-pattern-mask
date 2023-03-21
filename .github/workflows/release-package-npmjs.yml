@@ -1,0 +1,34 @@
+name: Build and publish library to npm.js registry
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: 'master'
+      - name: Setup NPM
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: npm i --force
+      - name: Build
+        run: npm run build-lib
+      - name: Pack
+        working-directory: ./dist/ng-pattern-mask
+        run: npm pack
+      - name: Publish
+        working-directory: ./dist/ng-pattern-mask
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
