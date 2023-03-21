@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: 'master'
       - uses: pnpm/action-setup@v2
         with:
           version: 6.0.2
@@ -29,8 +31,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: pnpm install
       - run: pnpm run build-lib
-      - name: Run Tests
+      - name: Run Publish
         working-directory: ./dist/ng-pattern-mask
-        run: pnpm publish ng-pattern-mask
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
