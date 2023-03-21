@@ -14,7 +14,7 @@ export class NgPatternMaskDirective {
   public ngpmCharPlaceholders!: string;
 
   private options = {
-    digitPlaceholders: this.ngpmDigitPlaceholders || 'XdDmMyY9',
+    digitPlaceholders: this.ngpmDigitPlaceholders || 'XdDmMyY09',
     charPlaceholders: this.ngpmCharPlaceholders || '_'
   }
 
