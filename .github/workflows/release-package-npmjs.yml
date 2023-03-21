@@ -31,7 +31,7 @@ jobs:
         run: npm pack
       - name: Publish
         working-directory: ./dist/ng-pattern-mask
-        run: npm publish --access public 
+        run: npm publish 
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
