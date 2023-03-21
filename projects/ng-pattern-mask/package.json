@@ -10,7 +10,7 @@
     "url": "https://github.com/alessiobianchini/ng-pattern-mask"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@alessiobianchini:registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
