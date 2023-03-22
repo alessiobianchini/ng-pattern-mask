@@ -1,6 +1,15 @@
 {
   "name": "ng-mask-ws",
   "version": "0.0.0",
+  "author": {
+    "name": "Alessio Bianchini",
+    "email": "alessio.bianchini@doit.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessiobianchini/ng-pattern-mask"
+  },
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
