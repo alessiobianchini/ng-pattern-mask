@@ -32,7 +32,7 @@ import {NgPatternMaskModule} from 'ng-pattern-mask';
     ngPatternMask
     ngpmPattern="dd.MM.yyyy"
     placeholder="dd.MM.yyyy"
-    ngpmDigitPlaceholders="abcd" <!-- OPTIONAL default = XdDmMyY09 -->
+    ngpmDigitPlaceholders="dDmMyYhH09" <!-- OPTIONAL default = dDmMyYhH09 -->
     ngpmCharPlaceholders="_-" <!-- OPTIONAL default = _ -->
 />
 ```
